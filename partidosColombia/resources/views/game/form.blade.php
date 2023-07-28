@@ -6,16 +6,19 @@
             {{ Form::text('game_date', $game->game_date, ['class' => 'form-control' . ($errors->has('game_date') ? ' is-invalid' : ''), 'placeholder' => 'Game Date']) }}
             {!! $errors->first('game_date', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('local_team') }}
-            {{ Form::text('local_team', $game->local_team, ['class' => 'form-control' . ($errors->has('local_team') ? ' is-invalid' : ''), 'placeholder' => 'Local Team']) }}
+            {{ Form::select('local_team', $teams, $game->local_team, ['class' => 'form-control' . ($errors->has('local_team') ? ' is-invalid' : ''), 'placeholder' => 'Local Team']) }}
             {!! $errors->first('local_team', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('visiting_team') }}
-            {{ Form::text('visiting_team', $game->visiting_team, ['class' => 'form-control' . ($errors->has('visiting_team') ? ' is-invalid' : ''), 'placeholder' => 'Visiting Team']) }}
+            {{ Form::select('visiting_team', $teams, $game->visiting_team, ['class' => 'form-control' . ($errors->has('visiting_team') ? ' is-invalid' : ''), 'placeholder' => 'Visiting Team']) }}
             {!! $errors->first('visiting_team', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('user_id') }}
             {{ Form::text('user_id', $game->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}

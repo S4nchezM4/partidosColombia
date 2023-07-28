@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class GameController extends Controller
     public function create()
     {
         $game = new Game();
-        return view('game.create', compact('game'));
+        $teams = Team::pluck('team_name', 'id');
+        return view('game.create', compact('game', 'teams'));
     }
 
     /**
