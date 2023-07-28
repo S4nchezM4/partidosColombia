@@ -57,6 +57,8 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('games.index') }}">{{ __('Listar Partidos') }}</a>
                                     <a class="dropdown-item" href="{{ route('games.create') }}">{{ __('Registrar Partido') }}</a>
+                                    <a class="dropdown-item" href="{{ route('teams.index') }}">{{ __('Listar Equipos') }}</a>
+                                    <a class="dropdown-item" href="{{ route('teams.create') }}">{{ __('Registrar Equipo') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

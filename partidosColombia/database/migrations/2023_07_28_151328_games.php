@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('game_date', 50);
-            $table->string('local_team', 50);
-            $table->string('visiting_team', 45);
+            $table->bigInteger('local_team',)->unsigned();
+            $table->bigInteger('visiting_team')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('local_team')->references('id')->on('teams');
+            $table->foreign('visiting_team')->references('id')->on('teams');
         });
     }
 
