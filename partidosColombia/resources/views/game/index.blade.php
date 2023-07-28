@@ -37,9 +37,8 @@
                                         <th>No</th>
                                         
 										<th>Game Date</th>
-										<th>Team 1</th>
-										<th>Team 2</th>
-										<th>Team Type</th>
+										<th>Local Team</th>
+										<th>Visiting Team</th>
 										<th>User Id</th>
 
                                         <th></th>
@@ -51,9 +50,8 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $game->game_date }}</td>
-											<td>{{ $game->team_1 }}</td>
-											<td>{{ $game->team_2 }}</td>
-											<td>{{ $game->team_type }}</td>
+											<td>{{ $game->local_team }}</td>
+											<td>{{ $game->visiting_team }}</td>
 											<td>{{ $game->user_id }}</td>
 
                                             <td>

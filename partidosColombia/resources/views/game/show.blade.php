@@ -25,16 +25,12 @@
                             {{ $game->game_date }}
                         </div>
                         <div class="form-group">
-                            <strong>Team 1:</strong>
-                            {{ $game->team_1 }}
+                            <strong>Local Team:</strong>
+                            {{ $game->local_team }}
                         </div>
                         <div class="form-group">
-                            <strong>Team 2:</strong>
-                            {{ $game->team_2 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Team Type:</strong>
-                            {{ $game->team_type }}
+                            <strong>Visiting Team:</strong>
+                            {{ $game->visiting_team }}
                         </div>
                         <div class="form-group">
                             <strong>User Id:</strong>

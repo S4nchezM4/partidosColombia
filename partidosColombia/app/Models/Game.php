@@ -9,9 +9,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $game_date
- * @property $team_1
- * @property $team_2
- * @property $team_type
+ * @property $local_team
+ * @property $visiting_team
  * @property $user_id
  * @property $created_at
  * @property $updated_at
@@ -25,9 +24,8 @@ class Game extends Model
     
     static $rules = [
 		'game_date' => 'required',
-		'team_1' => 'required',
-		'team_2' => 'required',
-		'team_type' => 'required',
+		'local_team' => 'required',
+		'visiting_team' => 'required',
 		'user_id' => 'required',
     ];
 
@@ -38,7 +36,7 @@ class Game extends Model
      *
      * @var array
      */
-    protected $fillable = ['game_date','team_1','team_2','team_type','user_id'];
+    protected $fillable = ['game_date','local_team','visiting_team','user_id'];
 
 
     /**
