@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Game Date</th>
-										<th>Local Team</th>
-										<th>Visiting Team</th>
-										<th>User Id</th>
+										<th>Fecha del partido</th>
+										<th>Equipo Local</th>
+										<th>Equipo Visitante</th>
+										<th>Creado por</th>
 
                                         <th></th>
                                     </tr>
@@ -49,9 +49,18 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+
+
+
 											<td>{{ $game->game_date }}</td>
+
+
 											<td>{{ $game->local_team }}</td>
+
 											<td>{{ $game->visiting_team }}</td>
+
+
+
 											<td>{{ $game->user_id }}</td>
 
                                             <td>

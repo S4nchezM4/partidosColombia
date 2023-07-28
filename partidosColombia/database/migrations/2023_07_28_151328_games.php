@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('game_date', 50);
-            $table->bigInteger('local_team',)->unsigned();
+            $table->bigInteger('local_team')->unsigned();
             $table->bigInteger('visiting_team')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->timestamps();

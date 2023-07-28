@@ -46,6 +46,10 @@ class Game extends Model
     {
         return $this->hasOne('App\Models\User', 'id', 'user_id');
     }
+    public function teams()
+    {
+        return $this->hasOne('App\Models\Team', 'id', 'team_name');
+    }
     
 
 }
