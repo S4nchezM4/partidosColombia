@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 /**
@@ -91,6 +92,7 @@ class GameController extends Controller
         request()->validate(Game::$rules);
 
         $game->update($request->all());
+
         return redirect()->route('games.index')
             ->with('success', 'Game updated successfully');
     }

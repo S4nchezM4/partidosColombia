@@ -17,6 +17,8 @@ return new class extends Migration
             $table->bigInteger('local_team')->unsigned();
             $table->bigInteger('visiting_team')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->string('home_goals');
+            $table->string('visiting_goals');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('local_team')->references('id')->on('teams');

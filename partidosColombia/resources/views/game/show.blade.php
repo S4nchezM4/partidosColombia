@@ -36,6 +36,14 @@
                             <strong>User Id:</strong>
                             {{ $game->user_id }}
                         </div>
+                        <div class="form-group">
+                            <strong>Home Goals:</strong>
+                            {{ $game->home_goals }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Visiting Goals:</strong>
+                            {{ $game->visiting_goals }}
+                        </div>
 
                     </div>
                 </div>
