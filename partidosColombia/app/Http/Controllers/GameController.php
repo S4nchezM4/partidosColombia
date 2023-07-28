@@ -75,8 +75,8 @@ class GameController extends Controller
     public function edit($id)
     {
         $game = Game::find($id);
-
-        return view('game.edit', compact('game'));
+        $teams = Team::pluck('team_name', 'id');
+        return view('game.edit', compact('game', 'teams'));
     }
 
     /**
@@ -91,7 +91,6 @@ class GameController extends Controller
         request()->validate(Game::$rules);
 
         $game->update($request->all());
-
         return redirect()->route('games.index')
             ->with('success', 'Game updated successfully');
     }
